@@ -1,21 +1,68 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="pt-br">
-  
-  <head>Cadastro</head>
-  <meta charset="utf-8">
-  <title>Cadastro</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+{% load static %}
 
-  <body>
-    <form action="cadastro.php" method="post">
-      <label for="nome">Nome</label>
-      <input type="text" name="nome" id="nome" placeholder="Nome" required>
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email" placeholder="Email" required>
-      <label for="senha">Senha</label>
-      <input type="password" name="senha" id="senha" placeholder="Senha" required>
-      <input type="submit" value="Cadastrar">
-    </form>
-</html>
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'autenticacao/css/cadastro.css' %}">
+
+	{% endblock %}
+
+{% block 'titulo' %}Cadastre-se{% endblock %}
+
+{% block 'body' %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 sidebar">
+                <div class="logo_sidebar">
+                    
+                    <h2 class="logo">
+                        <img class="img_logo_sidebar" src=" {% static 'autenticacao/image/logo.png'  %} ">IMOBI
+                    </h2>
+
+                </div>
+
+                <div class="corpo_sidebar">
+                    <div>
+                        <h2 class="titulo cor_branca">Cadastre-se</h2>
+                    </div>
+
+                    <div>
+                        <p class="cor_branca descricao">As melhores casas</p>
+                        <p style="margin-top:-20px" class="cor_branca descricao">Nos melhores preços</p>
+                        <br>
+                        <br>
+                        <a class="btn_logar" href="">LOGAR</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="area_cadastrar">
+                
+                    <form action="" method="">
+                        <h2 class="titulo_area_cadastrar">Cadastre-se</h2>
+                        <br>
+                        <input name="username" class="input_cadastrar input_cadastrar_nome" type="text" placeholder="Username...">
+                        <br>
+                        <br>
+                        <input name="email" class="input_cadastrar input_cadastrar_email" type="text" placeholder="Email...">
+                        <br>
+                        <br>
+                        <input name="senha" class="input_cadastrar input_cadastrar_senha" type="password" placeholder="Senha...">
+                        <br>
+                        <input class="btn_cadastrar" type="submit" value="Cadastrar">
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+{% endblock %}
