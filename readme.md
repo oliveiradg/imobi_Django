@@ -104,3 +104,7 @@ Em resumo, foi estudado e desenvolvenvolvido um projeto Django para criar um sit
 Feito com ❤ por JBOliveira para os #100daysOfPython 
 <br>
 <br>
+
+#### Dia 02: projeto "IMOBI"
+
+Nesta aula, aprendi a criar um modelo de dados para armazenar informações de imóveis no banco de dados. Foi interessante entender como definir os campos do modelo e como utilizar as migrações do Django para criar as tabelas no banco de dados.
